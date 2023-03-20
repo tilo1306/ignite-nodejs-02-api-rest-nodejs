@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/tilo1306/ignite-nodejs-02-api-rest-nodejs/issues"
   },
-  "homepage": "https://github.com/tilo1306/ignite-nodejs-02-api-rest-nodejs#readme"
+  "homepage": "https://github.com/tilo1306/ignite-nodejs-02-api-rest-nodejs#readme",
+  "devDependencies": {
+    "typescript": "^5.0.2"
+  }
 }
