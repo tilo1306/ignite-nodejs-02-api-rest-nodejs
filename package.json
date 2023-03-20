@@ -19,5 +19,8 @@
   "homepage": "https://github.com/tilo1306/ignite-nodejs-02-api-rest-nodejs#readme",
   "devDependencies": {
     "typescript": "^5.0.2"
+  },
+  "dependencies": {
+    "fastify": "^4.15.0"
   }
 }
