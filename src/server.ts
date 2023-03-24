@@ -1,19 +1,13 @@
 import fastify from 'fastify'
-import crypto from 'node:crypto'
-import { knex } from './database/database'
 import { env } from './env'
-
+import { transactionsRoutes } from './routes/transactions'
+import cookie from '@fastify/cookie'
 const server = fastify()
 
-server.get('/hello', async () => {
-  const transacion = await knex('sqlite_schema')
-    .insert({
-      id: crypto.randomUUID(),
-      amount: 1000,
-    })
-    .returning('*')
+server.register(cookie)
 
-  return transacion
+server.register(transactionsRoutes, {
+  prefix: 'transactions',
 })
 
 server.listen({ port: env.PORT }).then(() => {
